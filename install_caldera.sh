@@ -33,6 +33,8 @@ source ~/.profile
 
 git clone https://github.com/mitre/caldera.git --recursive
 cd caldera
+mv ./conf/default.yml ./conf/default.yml_bkp
+cp ../../mitre_caldera/default.yml ./conf/
 pip3 install -r requirements.txt
 python3 server.py --insecure --build
 
